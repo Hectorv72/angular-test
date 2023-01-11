@@ -1,0 +1,6 @@
+<div style="border: 1px solid red;">
+  <!-- Aplica diseño condicional por medio de un objeto -->
+  <p [ngClass]="{completed: task?.completed, task: true}">{{ task?.title }}</p>
+  <p>{{ task?.completed ? 'Completada' : 'Incompleta' }}</p>
+  <button (click)="deleteTask()">Eliminar</button>
+</div>
