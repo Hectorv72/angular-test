@@ -1,0 +1,15 @@
+<p>mi-componente works with {{name}}</p>
+<div [style.background]=" age >= 18 ? 'red' : 'blue'">
+  Tu edad es {{age}}
+</div>
+<div *ngIf="age >= 18">
+  Eres mayor de 18
+</div>
+<div *ngIf="age < 18">
+  Eres menor de 18
+</div>
+<ul>
+  <li *ngFor="let user of users; let id = index">{{id}}-{{user}}</li>
+</ul>
+<button (click)="addAge()">Aumentar</button>
+<button (click)="lessAge()">Disminuir</button>

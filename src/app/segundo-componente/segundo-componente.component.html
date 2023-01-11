@@ -1,0 +1,5 @@
+<div style="border: solid 2px red;">
+  <input [(ngModel)]="name" type="text" placeholder="nombre" />
+  <app-saludo [hello]="name" (mensajeEmitter)="onGetMessage($event)"></app-saludo>
+  <button (click)="onClickAlert()">click alerta</button>
+</div>
