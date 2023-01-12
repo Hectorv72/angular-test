@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { FormTaskPageComponent } from './pages/form-task-page/form-task-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListsModule } from './modules/lists/lists.module';
+import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { LoginFormComponent } from './components/forms/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +31,18 @@ import { ListsModule } from './modules/lists/lists.module';
     TaskFormComponent,
     HomePageComponent,
     NotFoundPageComponent,
-    FormTaskPageComponent
+    FormTaskPageComponent,
+    ContactListComponent,
+    ContactComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    ListsModule
+    ListsModule,
+    HttpClientModule // Importamos el modulo HttpClientModule para hacer peticiones http
   ],
   providers: [],
   bootstrap: [AppComponent]
